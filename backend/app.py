@@ -58,6 +58,3 @@ def audio():
     audiopath = './audios/' + audiofile.filename
     audiofile.save(audiopath)
     return {"text": Transcribe(audiopath)}
-
-if __name__ == "__main__":
-    app.run(debug=True)
