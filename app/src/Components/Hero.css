@@ -1,0 +1,139 @@
+/* Basic page styling */
+.app {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f8ff;
+}
+
+/* Heading styling */
+h1 {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Description styling */
+p {
+  font-size: 1.3em;
+  color: #34495e;
+  text-align: center;
+  margin: 0 20px 20px;
+  line-height: 1.5;
+}
+
+/* Button container styling */
+.button-container {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+/* General button styling */
+.button {
+  padding: 4px 24px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: none;
+  display: flex;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Specific button colors */
+.button:first-child {
+  background-color: #2980b9;
+  color: white;
+}
+
+.button:first-child:hover {
+  background-color: #3498db;
+}
+
+.button:last-child {
+  background-color: #8e44ad;
+  color: white;
+}
+
+.button:last-child:hover {
+  background-color: #9b59b6;
+}
+
+/* Audio options container - side-by-side layout */
+.audio-options {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+/* Individual audio option buttons */
+.audio-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Text box styling */
+.text-box-container {
+  margin-top: 15px;
+}
+
+.text-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 2px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #2c3e50;
+}
+
+/* Predict button styling */
+.predict-button {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.predict-button:hover {
+  background-color: #2ecc71;
+}
+
+/* Prediction output styling */
+.prediction-output {
+  font-size: 1.3em;
+  color: #0b0a0a;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Mic icon styling */
+.mic-icon {
+  margin-right: 5px;
+  font-size: 24px;
+}
+
+/* keyboard icon styling */
+.keyboard-icon {
+  margin-right: 5px;
+  font-size: 28px;
+}
