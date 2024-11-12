@@ -14,11 +14,12 @@ stop_words = set(stopwords.words('english'))
 lemmatizer = WordNetLemmatizer()
 
 
-client=os.path.join(os.getcwd(),"..","app","dist")
+# client=os.path.join(os.getcwd(),"..","app","dist")
 
 
 app = Flask(__name__)
 CORS(app)
+
 
 def preprocess_text(text):
     text = text.lower()
@@ -27,12 +28,12 @@ def preprocess_text(text):
     return ' '.join(tokens)
 
 
-@app.route("/",defaults={"filename":""})
-@app.route("/<path:filename>")
-def index(filename):
-    if not filename:
-        filename="index.html"
-    return send_from_directory(client,filename)
+# @app.route("/",defaults={"filename":""})
+# @app.route("/<path:filename>")
+# def index(filename):
+#     if not filename:
+#         filename="index.html"
+#     return send_from_directory(client,filename)
 
 @app.post('/predict')
 def predict():
@@ -58,3 +59,11 @@ def audio():
     audiopath = './audios/' + audiofile.filename
     audiofile.save(audiopath)
     return {"text": Transcribe(audiopath)}
+
+@app.get('/test')
+def test():
+    return "hi"
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

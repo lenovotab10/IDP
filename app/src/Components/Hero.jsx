@@ -24,13 +24,14 @@ export default function Hero() {
   });
 
   const GetResult = async (inputText) => {
-    const url = "http://localhost:5000/predict";
+    const url = "https://obscure-space-meme-5g4vwr5v9qv3prg6-5000.app.github.dev/predict";
     const data = {
       input: inputText,
     };
     const options = {
       method: "POST",
       headers: {
+        
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
@@ -93,17 +94,7 @@ export default function Hero() {
       const formData = new FormData();
       formData.append("audio", file);
 
-      const url = "http://localhost:5000/audio/convert";
-      const data = {
-        audio: "file",
-      };
-      // const response = await fetch(url, {
-      //   method: "POST",
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      //   body: JSON.stringify(data),
-      // });
+      const url = "https://obscure-space-meme-5g4vwr5v9qv3prg6-5000.app.github.dev/audio/convert";
       try {
         setProcessing(true);
         const response = await fetch(url, {
